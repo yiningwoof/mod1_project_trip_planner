@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_12_214846) do
+ActiveRecord::Schema.define(version: 2019_11_13_172233) do
 
   create_table "trips", force: :cascade do |t|
     t.string "destination_currency"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 2019_11_12_214846) do
     t.integer "user_id"
     t.integer "trip_id"
     t.float "exchange_rate"
-    t.string "home_currency"
-    t.string "destination_currency"
   end
 
   create_table "users", force: :cascade do |t|
