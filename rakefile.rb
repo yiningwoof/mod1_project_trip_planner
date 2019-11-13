@@ -1,13 +1,17 @@
-require_relative 'environment'
+require_relative 'config/environment'
+# require 'sinatra'
+
+# configure :development do
+#     set :database_file, 'db/trips.sqlite'
+# end
 require 'sinatra/activerecord/rake'
 
-# namespace :db do
-#     task :environment do
-#         require_relative 'environment'
-#     end
+desc 'starts a console'
+task :console do
+ ActiveRecord::Base.logger = Logger.new(STDOUT)
+ Pry.start
+end
 
-#     # desc 'migrate changes to your database'
-#     # task :migrate => :environment do
-#     #   User.create_table
-#     # end
+# task :environment do
+#     require_relative 'environment'
 # end

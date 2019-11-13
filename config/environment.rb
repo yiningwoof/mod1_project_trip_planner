@@ -4,10 +4,11 @@ require 'yaml/store'
 require 'ostruct'
 require 'date'
 require 'require_all'
+require 'bundler'
 # require 'pry'
 
-require 'bundler/setup'
-Bundler.require_all
+require 'bundler'
+Bundler.require
  
 # put the code to connect to the database here
 ActiveRecord::Base.establish_connection(
