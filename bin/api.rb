@@ -17,7 +17,6 @@ end
 def get_destination_cash_amount(home_currency, destination_currency, home_cash_amount)
     rate = get_current_rate(home_currency, destination_currency)
     destination_cash_amount = (home_cash_amount.to_f * rate).round(2)
-    puts destination_cash_amount
     destination_cash_amount
 end
 
